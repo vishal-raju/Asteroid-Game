@@ -27,7 +27,7 @@ def main():
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2) 
 
     asteroids = pygame.sprite.Group()
-    Asteroid.containers = (asteroids, updatable, drawable)
+    Asteroid.containers = (asteroids, drawable ,updatable)
 
     AsteroidField.containers = (updatable)
 
@@ -62,7 +62,7 @@ def main():
 
         pygame.display.flip()
         
-        dt = (clock.tick(60))/1000
+        dt = clock.tick(60) / 1000
 
 
 if __name__ == "__main__":
